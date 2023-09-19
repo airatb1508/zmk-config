@@ -45,7 +45,7 @@
 
         raise_layer {
             bindings = <
-&trans  &trans  &trans    &trans  &kp END  &trans           &trans            &trans          &trans    &kp LS(LG(NUMBER_5))  &trans            &kp UP_ARROW  &kp C_VOLUME_UP    &trans
+&trans  &trans  &trans    &trans  &kp END  &trans           &trans            &trans          &trans    &kp LS(LA(NUMBER_5))  &trans            &kp UP_ARROW  &kp C_VOLUME_UP    &trans
         &trans  &kp HOME  &trans  &trans   &kp RIGHT_ARROW  &trans            &trans          &trans    &trans                &trans            &trans        &kp K_MUTE
         &trans  &trans    &trans  &trans   &trans           &kp LEFT_ARROW    &kp DOWN_ARROW  &kp HOME  &kp C_PREV            &kp C_PLAY_PAUSE  &kp C_NEXT    &kp C_VOLUME_DOWN
                           &trans  &trans   &trans           &lt 3 RET         &lt 3 ESC       &trans    &trans                &trans
