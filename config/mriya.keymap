@@ -73,7 +73,7 @@
         layer_5 {
             bindings = <
 &trans  &trans  &trans     &trans     &kp END     &trans     &trans      &trans    &trans    &trans             &trans  &kp UP  &trans  &trans
-        &trans  &kp HOME   &kp LC(S)  &kp DELETE  &kp RIGHT  &trans      &trans    &trans    &kp LC(BACKSPACE)  &trans  &trans  &trans
+        &trans  &kp HOME   &kp LC(S)  &kp DELETE  &kp RIGHT  &kp ESC     &trans    &trans    &kp LC(BACKSPACE)  &trans  &trans  &trans
         &trans  &kp LC(Z)  &kp LC(C)  &kp LC(V)   &trans     &kp LEFT    &kp DOWN  &kp HOME  &trans             &trans  &trans  &trans
                            &trans     &trans      &trans     &trans      &trans    &trans    &trans             &trans
             >;
