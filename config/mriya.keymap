@@ -72,10 +72,10 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans     &trans     &kp END     &trans     &trans      &trans    &trans    &trans             &trans  &kp UP  &trans  &kp LC(ENTER)
-        &trans  &kp HOME   &kp LC(S)  &kp DELETE  &kp RIGHT  &kp ESC     &trans    &trans    &kp LC(BACKSPACE)  &trans  &trans  &trans
-        &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp LC(V)  &kp LEFT    &kp DOWN  &kp HOME  &trans             &trans  &trans  &trans
-                           &trans     &trans      &trans     &trans      &trans    &trans    &trans             &trans
+&trans  &trans  &kp LC(Q)  &kp LC(W)  &kp END     &kp LC(R)  &kp LC(T)    &kp LC(Y)  &trans    &trans             &trans  &kp UP  &trans  &kp LC(ENTER)
+        &trans  &kp HOME   &kp LC(S)  &kp DELETE  &kp RIGHT  &kp ESC      &kp LC(H)  &trans    &kp LC(BACKSPACE)  &trans  &trans  &trans
+        &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp LC(V)  &kp LEFT     &kp DOWN   &kp HOME  &trans             &trans  &trans  &trans
+                           &trans     &trans      &trans     &trans       &trans     &trans    &trans             &trans
             >;
         };
     };
