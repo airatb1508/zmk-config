@@ -78,7 +78,7 @@
             //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
-&trans  &trans  &trans    &trans  &kp END  &trans     &trans       &trans     &trans    &kp LS(LA(N5))  &trans  &kp UP  &kp C_VOLUME_UP    &trans
+&trans  &trans  &trans    &trans  &kp END  &trans     &trans       &trans     &trans    &kp LS(LA(N5))  &trans  &kp UP  &kp C_VOLUME_UP    &tog 1
         &trans  &kp HOME  &trans  &trans   &kp RIGHT  &trans       &trans     &trans    &trans          &trans  &trans  &kp K_MUTE
         &trans  &trans    &trans  &trans   &trans     &kp LEFT     &kp DOWN   &kp HOME  &trans          &trans  &trans  &kp C_VOLUME_DOWN
                                   &trans   &trans     &lt 7 RET    &lt 7 ESC  &trans    &trans
