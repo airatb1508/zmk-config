@@ -87,7 +87,7 @@
 
         emaxy {
             bindings = <
-&trans  &trans  &trans    &kp LA(X)  &trans      &kp LA(F)  &trans      &kp LA(V)  &trans          &trans  &trans  &kp UP     &trans  &kp LC(ENTER)
+&trans  &trans  &trans    &kp LA(X)  &kp END     &kp LA(F)  &trans      &kp LA(V)  &trans          &trans  &trans  &kp UP     &trans  &kp LC(ENTER)
         &trans  &kp HOME  &kp LC(F)  &kp DELETE  &kp RIGHT  &kp ESC     &trans     &trans          &kill   &trans  &trans     &trans
         &trans  &trans    &sl 6      &trans      &trans     &kp LEFT    &kp DOWN   &kp HOME        &trans  &trans  &kp LC(Z)  &trans
                                      &trans      &trans     &trans      &trans     &kt LEFT_SHIFT  &trans
