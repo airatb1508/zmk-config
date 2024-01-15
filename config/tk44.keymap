@@ -7,21 +7,27 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 
 #define DEF 0
 #define LWR 1
 #define RSE 2
 #define ADJ 3
 
-&lt {
-    quick_tap_ms = <200>;
-};
+&lt { quick_tap_ms = <200>; };
 
-&mt {
-    quick_tap_ms = <200>;
-};
+&mt { quick_tap_ms = <200>; };
 
 / {
+    macros {
+        kill: kill {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(END) &kp LA(X)>;
+            label = "KILL";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -33,10 +39,19 @@
             //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-&kp TAB  &kp ESCAPE  &kp Q  &kp W  &kp E             &kp R         &kp T          &kp Y            &kp U      &kp I                &kp O    &kp P     &kp LBKT       &kp ENTER
-         &kp LCTRL   &kp A  &kp S  &kp D             &kp F         &kp G          &kp H            &kp J      &kp K                &kp L    &kp SEMI  &mt RCTRL SQT
-         &kp LSHFT   &kp Z  &kp X  &kp C             &kp V         &kp B          &kp N            &kp M      &kp COMMA            &kp DOT  &kp FSLH  &kp BACKSLASH
-                                   &kp LEFT_COMMAND  &kp LEFT_ALT  &lt LWR RET    &lt 1 BACKSPACE  &kp SPACE  &lt 2 RIGHT_BRACKET
+&kp TAB  &kp ESCAPE  &kp Q  &kp W  &kp E             &kp R         &kp T        &kp Y            &kp U      &kp I                &kp O    &kp P     &kp LBKT       &kp ENTER
+         &kp LCTRL   &kp A  &kp S  &kp D             &kp F         &kp G        &kp H            &kp J      &kp K                &kp L    &kp SEMI  &mt RCTRL SQT
+         &kp LSHFT   &kp Z  &kp X  &kp C             &kp V         &kp B        &kp N            &kp M      &kp COMMA            &kp DOT  &kp FSLH  &kp BACKSLASH
+                                   &kp LEFT_COMMAND  &kp LEFT_ALT  &lt 2 RET    &lt 2 BACKSPACE  &kp SPACE  &lt 3 RIGHT_BRACKET
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans       &trans  &trans  &trans  &trans          &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &lt 4 RCTRL  &trans  &trans  &trans  &trans          &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans       &trans  &trans  &trans  &trans          &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                     &trans  &lt 5 LEFT_ALT  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -48,10 +63,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp UNDER       &kp F1    &kp F2  &kp F3       &kp F4    &kp F5       &kp F6     &kp F7    &kp F8       &kp F9    &kp F10   &kp F11          &mt RGUI F12
-           &mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH     &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR     &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-           &mt LALT EQUAL  &kp N1    &kp N2  &kp N3       &kp N4    &kp N5       &kp N6     &kp N7    &kp N8       &kp N9    &kp N0    &trans
-                                             &lt ADJ TAB  &trans    &trans       &trans     &trans    &lt ADJ DEL
+&kp GRAVE  &kp UNDER       &kp F1    &kp F2  &kp F3     &kp F4    &kp F5       &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11          &mt RGUI F12
+           &mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR  &mt RCTRL MINUS
+           &mt LALT EQUAL  &kp N1    &kp N2  &kp N3     &kp N4    &kp N5       &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &trans
+                                             &lt 7 TAB  &trans    &trans       &trans     &trans    &lt 7 DEL
             >;
         };
 
@@ -63,10 +78,37 @@
             //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
-&trans  &kp KP_NUM       &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS    &kp C_VOL_UP  &kp HOME  &kp LS(LA(N5))  &kp PG_UP  &kp SLCK         &kp CAPS         &trans
-        &mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS     &kp C_MUTE    &kp LEFT  &kp UP          &kp RIGHT  &kp INS          &mt RCTRL K_APP
-        &trans           &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT      &kp C_VOL_DN  &kp END   &kp DOWN        &kp PG_DN  &kp PAUSE_BREAK  &trans
-                                                     &trans     &trans     &lt ADJ RET     &lt ADJ ESC   &trans    &trans
+&trans  &trans  &trans    &trans  &kp END  &trans     &trans       &trans     &trans    &kp LS(LA(N5))  &trans  &kp UP  &kp C_VOLUME_UP    &trans
+        &trans  &kp HOME  &trans  &trans   &kp RIGHT  &trans       &trans     &trans    &trans          &trans  &trans  &kp K_MUTE
+        &trans  &trans    &trans  &trans   &trans     &kp LEFT     &kp DOWN   &kp HOME  &trans          &trans  &trans  &kp C_VOLUME_DOWN
+                                  &trans   &trans     &lt 7 RET    &lt 7 ESC  &trans    &trans
+            >;
+        };
+
+        emaxy {
+            bindings = <
+&trans  &trans  &trans    &kp LA(X)  &trans      &kp LA(F)  &trans      &kp LA(V)  &trans          &trans  &trans  &kp UP     &trans  &kp LC(ENTER)
+        &trans  &kp HOME  &kp LC(F)  &kp DELETE  &kp RIGHT  &kp ESC     &trans     &trans          &kill   &trans  &trans     &trans
+        &trans  &trans    &sl 6      &trans      &trans     &kp LEFT    &kp DOWN   &kp HOME        &trans  &trans  &kp LC(Z)  &trans
+                                     &trans      &trans     &trans      &trans     &kt LEFT_SHIFT  &trans
+            >;
+        };
+
+        meta {
+            bindings = <
+&kp LA(TAB)  &kp LA(ESC)    &kp LA(Q)  &kp LA(C)  &kp LA(E)         &kp LA(R)     &kp LA(T)      &kp LA(Y)        &kp LA(U)  &kp LA(I)      &kp LA(O)    &kp LA(P)  &kp LBKT  &kp ENTER
+             &kp LA(LCTRL)  &kp LA(A)  &kp LA(S)  &kp LA(D)         &kp LA(F)     &kp LA(G)      &kp LA(H)        &kp LA(J)  &kp LA(K)      &kp LA(L)    &kp SEMI   &kp APOS
+             &kp LA(LSHFT)  &kp RA(Z)  &kp LA(X)  &kp LA(C)         &kp LA(V)     &kp LA(B)      &kp LA(N)        &kp LA(M)  &kp LA(COMMA)  &kp LA(DOT)  &kp FSLH   &kp BSLH
+                                                  &kp LEFT_COMMAND  &kp LEFT_ALT  &lt 3 ENTER    &lt 2 BACKSPACE  &kp SPACE  &kp RBKT
+            >;
+        };
+
+        c-x {
+            bindings = <
+&trans  &trans  &trans  &trans     &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &kp LA(S)  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans     &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                   &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
