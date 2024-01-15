@@ -23,7 +23,7 @@
         kill: kill {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(END) &kp LA(X)>;
+            bindings = <&kp LS(END) &kp LA(X) &kt LEFT_SHIFT>;
             label = "KILL";
         };
     };
