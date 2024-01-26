@@ -63,7 +63,7 @@
 &trans  &trans  &trans    &trans  &kp END  &trans           &trans       &trans     &trans    &kp LS(LA(NUMBER_5))  &trans  &kp UP_ARROW  &kp C_VOLUME_UP    &tog 1
         &trans  &kp HOME  &trans  &trans   &kp RIGHT_ARROW  &trans       &trans     &trans    &trans                &trans  &trans        &kp K_MUTE
         &trans  &trans    &trans  &trans   &trans           &trans       &kp LEFT   &kp DOWN  &kp HOME              &trans  &trans        &kp C_VOLUME_DOWN
-                          &trans  &trans   &trans           &lt 4 RET    &lt 4 ESC  &trans    &trans                &trans
+                          &trans  &trans   &trans           &lt 2 RET    &lt 2 ESC  &trans    &trans                &trans
             >;
         };
 
