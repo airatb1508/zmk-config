@@ -83,9 +83,9 @@
             //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
-&trans  &trans  &kp TAB   &trans  &kp END  &trans     &trans       &trans     &trans    &kp LS(LA(N5))  &trans  &kp UP     &kp C_VOLUME_UP    &trans
-        &trans  &kp HOME  &trans  &trans   &kp RIGHT  &kp ESC      &trans     &trans    &trans          &trans  &kp ENTER  &kp K_MUTE
-        &trans  &trans    &trans  &trans   &trans     &kp LEFT     &kp DOWN   &kp HOME  &trans          &trans  &trans     &kp C_VOLUME_DOWN
+&trans  &trans  &kp TAB   &trans  &kp END  &trans     &trans       &trans     &trans    &kp LS(LA(N5))  &trans  &kp UP         &kp C_VOLUME_UP    &trans
+        &trans  &kp HOME  &trans  &trans   &kp RIGHT  &kp ESC      &trans     &trans    &trans          &trans  &kp ENTER      &kp K_MUTE
+        &trans  &trans    &trans  &trans   &trans     &kp LEFT     &kp DOWN   &kp HOME  &trans          &trans  &kp BACKSLASH  &kp C_VOLUME_DOWN
                                   &trans   &trans     &lt 3 RET    &lt 3 ESC  &trans    &trans
             >;
         };
