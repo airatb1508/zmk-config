@@ -53,19 +53,10 @@
             //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-&kp TAB  &kp ESCAPE  &kp Q  &kp W  &kp E             &kp R         &kp T        &kp Y            &kp U      &kp I                &kp O    &kp P     &kp LBKT       &kp ENTER
-         &kp LCTRL   &kp A  &kp S  &kp D             &kp F         &kp G        &kp H            &kp J      &kp K                &kp L    &kp SEMI  &mt RCTRL SQT
-         &kp LSHFT   &kp Z  &kp X  &kp C             &kp V         &kp B        &kp N            &kp M      &kp COMMA            &kp DOT  &kp FSLH  &kp BACKSLASH
-                                   &kp LEFT_COMMAND  &kp LEFT_ALT  &lt 2 RET    &lt 2 BACKSPACE  &kp SPACE  &lt 3 RIGHT_BRACKET
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &trans       &trans  &trans  &trans  &trans          &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &lt 4 RCTRL  &trans  &trans  &trans  &trans          &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans       &trans  &trans  &trans  &trans          &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                     &trans  &lt 5 LEFT_ALT  &trans    &trans  &trans  &trans
+&kp TAB  &kp ESCAPE  &kp Q  &kp W  &kp E   &kp R         &kp T           &kp Y            &kp U        &kp I      &kp O    &kp P                  &kp LBKT       &kp ENTER
+         &kp LCTRL   &kp A  &kp S  &kp D   &kp F         &kp G           &kp H            &kp J        &kp K      &kp L    &kp SEMI               &mt RCTRL SQT
+         &kp LSHFT   &kp Z  &kp X  &kp C   &kp V         &kp B           &kp N            &kp M        &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH  &kp BACKSLASH
+                                   &trans  &kp LEFT_ALT  &kp LEFT_GUI    &lt 1 BACKSPACE  &lt 2 SPACE  &trans
             >;
         };
 
@@ -77,10 +68,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp UNDER       &kp F1    &kp F2  &kp F3     &kp F4    &kp F5       &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11          &mt RGUI F12
-           &mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-           &mt LALT EQUAL  &kp N1    &kp N2  &kp N3     &kp N4    &kp N5       &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &trans
-                                             &lt 7 TAB  &trans    &trans       &trans     &trans    &lt 7 DEL
+&kp GRAVE  &kp UNDER       &kp UNDER              &kp F2  &kp F3     &kp F4    &kp PLUS     &kp MINUS  &kp EQUAL  &kp GRAVE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET            &kp F11          &mt RGUI F12
+           &mt LCTRL PLUS  &mt LCTRL EXCLAMATION  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp STAR   &kp LPAR          &mt RCTRL RIGHT_PARENTHESIS  &mt RCTRL MINUS
+           &mt LALT EQUAL  &mt LEFT_SHIFT N1      &kp N2  &kp N3     &kp N4    &kp N5       &kp N6     &kp N7     &kp N8     &kp N9            &kp N0                       &trans
+                                                          &lt 3 TAB  &trans    &trans       &trans     &trans     &lt 3 DEL
             >;
         };
 
@@ -92,37 +83,10 @@
             //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
-&trans  &trans  &trans    &trans  &kp END  &trans     &trans       &trans     &trans    &kp LS(LA(N5))  &trans  &kp UP  &kp C_VOLUME_UP    &tog 1
-        &trans  &kp HOME  &trans  &trans   &kp RIGHT  &trans       &trans     &trans    &trans          &trans  &trans  &kp K_MUTE
-        &trans  &trans    &trans  &trans   &trans     &kp LEFT     &kp DOWN   &kp HOME  &trans          &trans  &trans  &kp C_VOLUME_DOWN
-                                  &trans   &trans     &lt 7 RET    &lt 7 ESC  &trans    &trans
-            >;
-        };
-
-        emaxy {
-            bindings = <
-&trans  &trans  &trans    &killregion  &kp END     &kp LA(F)  &trans      &kp LA(V)  &trans          &trans  &trans  &kp UP     &trans  &kp LC(ENTER)
-        &trans  &kp HOME  &kp LA(F)    &kp DELETE  &kp RIGHT  &kp ESC     &trans     &trans          &kill   &trans  &trans     &trans
-        &trans  &trans    &sl 6        &trans      &trans     &kp LEFT    &kp DOWN   &kp HOME        &trans  &trans  &kp LA(Z)  &trans
-                                       &trans      &trans     &trans      &trans     &kt LEFT_SHIFT  &trans
-            >;
-        };
-
-        meta {
-            bindings = <
-&kp LA(TAB)  &kp LA(ESC)    &kp LA(Q)  &copy      &kp LA(E)         &kp LA(R)      &kp LA(T)       &kp LA(Y)        &kp LA(U)  &kp LA(I)      &kp LA(O)    &kp LA(P)  &kp LBKT  &kp ENTER
-             &kp LA(LCTRL)  &kp LA(A)  &kp LA(S)  &kp LA(D)         &kp LG(RIGHT)  &kp LA(G)       &kp LA(H)        &kp LA(J)  &kp LA(K)      &kp LA(L)    &kp SEMI   &kp APOS
-             &kp LA(LSHFT)  &kp RA(Z)  &kp LA(X)  &kp LA(C)         &kp LA(V)      &kp LG(LEFT)    &kp LA(N)        &kp LA(M)  &kp LA(COMMA)  &kp LA(DOT)  &kp FSLH   &kp BSLH
-                                                  &kp LEFT_COMMAND  &kp LEFT_ALT   &lt 3 ENTER     &lt 2 BACKSPACE  &kp SPACE  &kp RBKT
-            >;
-        };
-
-        c-x {
-            bindings = <
-&trans  &trans  &trans  &trans     &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &kp LA(S)  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans     &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                   &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &kp TAB   &trans  &kp END  &trans     &trans       &trans     &trans    &kp LS(LA(N5))  &trans  &kp UP     &kp C_VOLUME_UP    &trans
+        &trans  &kp HOME  &trans  &trans   &kp RIGHT  &kp ESC      &trans     &trans    &trans          &trans  &kp ENTER  &kp K_MUTE
+        &trans  &trans    &trans  &trans   &trans     &kp LEFT     &kp DOWN   &kp HOME  &trans          &trans  &trans     &kp C_VOLUME_DOWN
+                                  &trans   &trans     &lt 3 RET    &lt 3 ESC  &trans    &trans
             >;
         };
 
