@@ -53,10 +53,10 @@
             //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-&kp TAB  &kp ESCAPE  &kp Q         &kp W  &kp E   &kp R         &kp T           &kp Y            &kp U        &kp I      &kp O    &kp P                  &kp LBKT       &kp ENTER
-         &kp LCTRL   &mt LCTRL A   &kp S  &kp D   &kp F         &kp G           &kp H            &kp J        &kp K      &kp L    &mt RCTRL SEMI         &mt RCTRL SQT
-         &kp LSHFT   &mt LSHIFT Z  &kp X  &kp C   &kp V         &kp B           &kp N            &kp M        &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH  &kp BACKSLASH
-                                          &trans  &kp LEFT_ALT  &kp LEFT_GUI    &lt 1 BACKSPACE  &lt 2 SPACE  &trans
+&kp TAB  &kp ESCAPE  &kp Q  &kp W  &kp E         &kp R         &kp T        &kp Y            &kp U        &kp I              &kp O    &kp P          &kp LBKT       &kp ENTER
+         &kp LCTRL   &kp A  &kp S  &kp D         &kp F         &kp G        &kp H            &kp J        &kp K              &kp L    &kp SEMICOLON  &mt RCTRL SQT
+         &kp LSHFT   &kp Z  &kp X  &kp C         &kp V         &kp B        &kp N            &kp M        &kp COMMA          &kp DOT  &kp SLASH      &kp BACKSLASH
+                                   &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE    &lt 1 BACKSPACE  &lt 2 SPACE  &kp RIGHT_BRACKET
             >;
         };
 
@@ -68,10 +68,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp UNDER       &kp UNDER              &kp F2  &kp F3     &kp F4    &kp PLUS     &kp MINUS  &kp EQUAL  &kp GRAVE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET            &kp F11          &mt RGUI F12
-           &mt LCTRL PLUS  &mt LCTRL EXCLAMATION  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp STAR   &kp LPAR          &mt RCTRL RIGHT_PARENTHESIS  &mt RCTRL MINUS
-           &mt LALT EQUAL  &mt LEFT_SHIFT N1      &kp N2  &kp N3     &kp N4    &kp N5       &kp N6     &kp N7     &kp N8     &kp N9            &mt RIGHT_SHIFT N0           &trans
-                                                          &lt 3 TAB  &trans    &trans       &trans     &trans     &lt 3 DEL
+&kp GRAVE  &kp UNDER       &kp UNDER        &kp F2  &kp F3     &kp F4    &kp PLUS     &kp MINUS  &kp EQUAL  &kp GRAVE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET            &kp F11          &mt RGUI F12
+           &mt LCTRL PLUS  &kp EXCLAMATION  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp STAR   &kp LPAR          &mt RCTRL RIGHT_PARENTHESIS  &mt RCTRL MINUS
+           &mt LALT EQUAL  &kp NUMBER_1     &kp N2  &kp N3     &kp N4    &kp N5       &kp N6     &kp N7     &kp N8     &kp N9            &mt RIGHT_SHIFT N0           &trans
+                                                    &lt 3 TAB  &trans    &trans       &trans     &trans     &lt 3 DEL
             >;
         };
 
