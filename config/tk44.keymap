@@ -16,7 +16,10 @@
 
 &lt { quick_tap_ms = <200>; };
 
-&mt { quick_tap_ms = <350>; };
+&mt {
+    quick_tap_ms = <350>;
+    flavor = "tap-preferred";
+};
 
 / {
     macros {
